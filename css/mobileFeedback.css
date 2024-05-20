@@ -1,0 +1,81 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+@font-face {
+	font-family: open-sans;
+	src: url(/fonts/OpenSans.ttf);
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: open-sans;
+}
+
+#feedback-container {
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#feedback-form {
+	align-items: center;
+}
+
+#result{
+	display:none;
+	position:absolute;
+	top:58vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#result-table{
+	margin: 0 auto;
+	font-size: calc(calc(1vw + 1vh)*1.5);
+}
+
+#thanks {
+	font-size: calc(calc(1vw + 1vh)*1.5);
+	font-weight: bold;
+	color: rgb(137, 6, 6);
+}
+
+.form-title{
+	text-align: center;
+	font-size: calc(calc(1vw + 1vh)*2.4);
+	color: rgb(137, 6, 6);
+}
+
+.form-field {
+	margin: 2vh 0 0 0;
+	padding-left: 3vw;
+	width: 80vw;
+	height: 8vh;
+	outline: none;
+	border: 1px solid rgb(207, 202, 202);
+	font-size: calc(calc(1vw + 1vh)*1.4);
+}
+
+.form-field:focus {
+	border: 2px solid rgb(137, 6, 6);
+}
+
+.form-submit{
+	background-color: rgb(137, 6, 6);
+	color:aliceblue;
+	border:rgb(137, 6, 6);
+	margin: 35vh 5vw 0 0;
+	width: 80vw;
+	height: 8vh;
+	font-size: calc(calc(1vw + 1vh)*1.5);
+}
+.form-submit:hover{
+	background-color:aliceblue;
+	color:rgb(137, 6, 6);
+	border: 1px solid rgb(137, 6, 6);
+}

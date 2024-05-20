@@ -1,0 +1,75 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+@font-face {
+	font-family: open-sans;
+	src: url(/fonts/OpenSans.ttf);
+}
+
+html, body{
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: open-sans;
+}
+
+#feedback-container {
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#feedback-form {
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#result{
+	display:none;
+}
+
+#result-table{
+	margin: 0 auto;
+}
+
+#thanks {
+font-weight: bold;
+color: rgb(137, 6, 6);
+}
+
+.form-title{
+	text-align: center;
+	color: rgb(137, 6, 6);
+}
+
+.form-field {
+	margin: 10px 10px 0 0;
+	width: 300px;
+	height: 30px;
+	outline: none;
+	border: 1px solid rgb(207, 202, 202);
+	padding-left: 10px;
+}
+
+.form-field:focus {
+	border: 2px solid rgb(137, 6, 6);
+}
+
+.form-submit{
+	background-color: rgb(137, 6, 6);
+	color:aliceblue;
+	border:rgb(137, 6, 6);
+	margin: 30px 10px 0 0;
+	width: 180px;
+	height: 35px;
+}
+.form-submit:hover{
+	background-color:aliceblue;
+	color:rgb(137, 6, 6);
+	border: 1px solid rgb(137, 6, 6);
+}
