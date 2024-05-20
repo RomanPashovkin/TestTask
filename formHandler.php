@@ -15,9 +15,16 @@ if(isset($_POST['email'])){
 	$email = $_POST['email'];
 }
 
+$errors = array();
 //проверка email на корректность
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	die("Некорректный формат email");
+	$errors[] = "Некорректный формат email";
+}
+
+if (!empty($errors)) {
+	http_response_code(400); // Устанавливаем статус 400 для ошибки
+	echo json_encode($errors);
+	exit;
 }
 
 //Выполнение запроса для добавления в базу

@@ -25,13 +25,13 @@ $news->execute();
 				<a><?php $date = new DateTime($row['date']); echo $date->Format('d.m.Y'); ?></a>
 			</div>
 			<div class="news-item-title">
-				<a href="#"><?php echo $row['title']; ?></a>
+				<a href="http://pashrosf.beget.tech/detailed.php?item=<?php echo $row['id'] ?>"><?php echo $row['title']; ?></a>
 			</div>
 			<div class="news-item-announce">
-				<a href="#"><?php echo $row['announce']; ?></a>
+				<a href="http://pashrosf.beget.tech/detailed.php?item=<?php echo $row['id'] ?>"><?php echo $row['announce']; ?></a>
 			</div>
 			<div class="news-item-btn">
-				<a href="#">ПОДРОБНЕЕ</a>
+				<a href="http://pashrosf.beget.tech/detailed.php?item=<?php echo $row['id'] ?>">ПОДРОБНЕЕ</a>
 			</div>
 		</div>
 	<?php endforeach; ?>
