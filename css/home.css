@@ -11,7 +11,7 @@ body {
 
 @font-face {
 	font-family: open-sans;
-	src: url(/fonts/OpenSans.ttf);
+	src: url(../fonts/OpenSans.ttf);
 }
 
 #home-title {
@@ -33,7 +33,7 @@ body {
 #lastNews-block {
 	position: relative;
 	overflow: hidden;
-	width: calc(var(--index) * 30);
+	width: 98%;
 	height: calc(var(--index) * 21.7);
 	margin: 0 calc(var(--index) * 0.1) calc(var(--index) * 0.11) 0;
 	/* border: 0.1vh solid #bdbcbc; */
@@ -42,7 +42,7 @@ body {
 }
 
 .lastNews-item {
-	width: calc(var(--index) * 27);
+	width: 97%;
 	height: calc(var(--index) * 4.8);
 	padding: calc(var(--index) * 0.8);
 	margin: 0 calc(var(--index) * 0.3) calc(var(--index) * 0.3) 0;
@@ -81,7 +81,7 @@ body {
 
 .lastNews-item-announce {
 	position: sticky;
-	width: calc(var(--index) * 25.6);
+	width: 100%;
 	height: calc(var(--index) * 3);
 }
 
