@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" media="screen and (min-width: 769px)" href = "/css/feedback.css">
+	<link rel = "stylesheet" media="screen and (max-width: 768px)" href = "/css/mobileFeedback.css">
+	<script src="https://unpkg.com/imask"></script>
+	<title>Форма обратной связи</title>
+</head>
+<body>
+	<div id = "feedback-container">
+		<div id = feedback-form>
+			<h1 class="form-title">Свяжитесь с нами</h1>
+			<form id = "fb-form" method = "POST">
+			<input placeholder="ФИО" type = "text" id = "FIO" class = "form-field" name = "FIO" required><br>
+			<input placeholder="Адрес" type = "text" id = "address" class = "form-field" name = "address" required><br>
+			<input placeholder="Телефон" type = "tel" id = "telephone" class = "form-field" name = "telephone" required><br>
+			<input placeholder="Эл.почта" type = "email" id = "email" class = "form-field" name = "email" required><br>
+			<input type = "submit" value = "Отправить форму" id = "submit-btn" class="form-submit" >
+		</form>
+	</div>
+
+		<div id = "result">
+			<a id = "thanks">Спасибо за обращение!</a>
+			<table id ="result-table"></table>
+		</div>
+	</div>
+</body>
+
+<script src="/scripts/sendForm.js"></script>
+
+<script>
+var tel = document.querySelector('input[type="tel"]');
+var dispatchMask = IMask(tel, {
+		mask: [
+			{
+				mask: '+7 (000) 000-00-00',
+				startsWith: '7',
+				lazy: false,
+				country: 'Russia'
+			},
+			{
+				country: 'Belarus',
+				mask: '375 (00) 000-00-00',
+				lazy: false,
+				startsWith: '3'
+			},
+			{
+				country: 'Kazakhstan',
+				mask: '+7 (000) 000-00-00',
+				lazy: false,
+				startsWith: '7'
+			}
+		],
+		dispatch: function (appended, dynamicMasked) {
+			var number = (dynamicMasked.value + appended).replace(/\D/g,'');
+			return dynamicMasked.compiledMasks.find(function (m) {
+				return number.indexOf(m.startsWith) === 0;
+			});
+		}
+	}
+)
+
+window.onbeforeunload = function(e) {
+	localStorage.setItem('scrollpos', window.scrollY);
+};
+</script>
+
+</html>
